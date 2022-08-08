@@ -12,9 +12,7 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormInput(event) {
   event.preventDefault();
-  formData[event.target.name] = event.target.value;
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(formData));
-  console.log(formData);
 }
 const localData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
 console.log(localData);
